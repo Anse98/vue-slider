@@ -57,9 +57,7 @@ const { createApp } = Vue;
       }
     },
     mounted() {
-      this.autoPlay = setInterval(()=> {
-        this.nextSlide();
-      },2000)
+      this.restartAutoPlay();
     },
   }).mount('#app')
 
