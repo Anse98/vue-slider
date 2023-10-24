@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue carousel</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/f1f0c66429.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <div class="slider-wrapper" tabindex="0">
+
+          <div class="item">
+              <img v-bind:src='images[currentIndex]'/>
+          </div>
+
+          <div class="thumbs">
+              <div class="prev" @click="prevSlide()">
+                
+              </div>
+              <div class="next" @click="nextSlide()"> 
+
+              </div>
+
+              <div class="thumb active">
+                  <img src="img/01.webp"/>
+              </div>
+              <div class="thumb">
+                  <img src="img/02.webp"/>
+              </div>
+              <div class="thumb">
+                  <img src="img/03.webp"/>
+              </div>
+              <div class="thumb">
+                  <img src="img/04.webp"/>
+              </div>
+              <div class="thumb">
+                  <img src="img/05.webp"/>
+              </div>
+          </div>
+
+      </div>
+  </div>
+  </div>
+    
+  <script src="./app.js"></script>
+</body>
+</html>
