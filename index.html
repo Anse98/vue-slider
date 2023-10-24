@@ -16,7 +16,7 @@
       <div class="slider-wrapper" tabindex="0" @mouseover="stopAutoPlay()" @mouseleave="restartAutoPlay()">
 
         <div class="item">
-          <img v-bind:src='images[currentIndex]' />
+          <img :src='images[currentIndex].image' />
         </div>
 
         <div class="thumbs">
@@ -27,12 +27,11 @@
 
           </div>
 
-          <div class="thumb" v-for="(image, index) in this.images" :class="{'active': currentIndex === index, 'test': true}"
+          <div class="thumb" v-for="(image, index) in this.images" :class="addClassActive(index)"
             @click="changeThumbImg(index)">
-            <img v-bind:src="image" />
+            <img :src="image.image"/>
           </div>
         </div>
-
       </div>
     </div>
   </div>
