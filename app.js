@@ -24,6 +24,7 @@ const { createApp } = Vue
         if(this.currentIndex === this.images.length) {
           this.currentIndex = 0;
         }
+
       },
 
       prevSlide(){
