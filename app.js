@@ -14,7 +14,9 @@ const { createApp } = Vue;
           "img/03.webp",
           "img/04.webp",
           "img/05.webp"
-        ],  
+        ],
+        
+        autoPlay:'',
       }
     },
     methods: {
@@ -43,12 +45,22 @@ const { createApp } = Vue;
           return 'active';
         }
       }, 
+
+      stopAutoPlay(){
+        clearInterval(this.autoPlay);
+      },
+
+      restartAutoPlay(){
+        this.autoPlay = setInterval(()=> {
+          this.nextSlide();
+        },2000)
+      }
     },
     mounted() {
-      setInterval(()=> {
+      this.autoPlay = setInterval(()=> {
         this.nextSlide();
-      },3000)
+      },2000)
     },
   }).mount('#app')
 
-
+ 

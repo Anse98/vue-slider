@@ -11,6 +11,10 @@
   align-items: center;
 }
 
+.slider-wrapper {
+  cursor: pointer;
+}
+
 .item {
   float: left;
   width: 700px;
