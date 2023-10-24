@@ -24,7 +24,6 @@ const { createApp } = Vue
         if(this.currentIndex === this.images.length) {
           this.currentIndex = 0;
         }
-
       },
 
       prevSlide(){
@@ -32,6 +31,16 @@ const { createApp } = Vue
 
         if(this.currentIndex < 0) {
           this.currentIndex = this.images.length - 1;
+        }
+      },
+
+      changeThumbImg(index){
+        this.currentIndex = index;
+      },
+
+      addClassActive(index){
+        if(this.currentIndex === index) {
+          return 'active'
         }
       }
     }

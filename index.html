@@ -25,8 +25,8 @@
 
               </div>
 
-              <div class="thumb active" v-for="image in this.images">
-                  <img :src="image"/>
+              <div class="thumb" v-for="(image, index) in this.images" :class="addClassActive(index)"  @click="changeThumbImg(index)">
+                  <img v-bind:src="image"/>
               </div>
           </div>
 
