@@ -1,10 +1,10 @@
 
 //VUE
 
-const { createApp } = Vue
+const { createApp } = Vue;
 
   createApp({
-    data() {
+    data: function() {
       return {
         currentIndex: 0,
 
@@ -40,11 +40,15 @@ const { createApp } = Vue
 
       addClassActive(index){
         if(this.currentIndex === index) {
-          return 'active'
+          return 'active';
         }
-      }
-    }
+      }, 
+    },
+    mounted() {
+      setInterval(()=> {
+        this.nextSlide();
+      },3000)
+    },
   }).mount('#app')
 
-  
-  
+
